@@ -74,7 +74,50 @@ list(map(split_title_and_name, people)) == list(map(lambda person: person.split(
 my_list = [number for number in range(0,1000) if number % 2 == 0]
 [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
 ```
+#3 NumPy
+```py
+import numpy as np
 
+# matrix
+
+m = np.array([[7, 8, 9], [10, 11, 12]])
+m
+array([[ 7,  8,  9],
+       [10, 11, 12]])
+# dimension
+m.shape
+(2, 3)
+
+n = np.arange(0, 30, 3) # start at 0 count up by 2, stop before 30
+o = np.linspace(0, 4, 9) # return 9 evenly spaced values from 0 to 4
+n = n.reshape(3, 5) # reshape array to be 3x5
+
+np.eye(3)
+array([[ 1.,  0.,  0.],
+       [ 0.,  1.,  0.],
+       [ 0.,  0.,  1.]])
+
+# dot product
+x.dot(y) # dot product  1*4 + 2*5 + 3*6
+
+# transpose
+z.T
+
+argmax and argmin return the index of the maximum and minimum values in the array.
+
+r[3, 3:6]
+r[r > 30]=30
+
+r_copy = r.copy()
+
+test = np.random.randint(0, 10, (4,3))
+for i, row in enumerate(test):
+    print('row', i, 'is', row)
+
+for i, j in zip(test, test2):
+    print(i,'+',j,'=',i+j)
+
+```
 
 
 
